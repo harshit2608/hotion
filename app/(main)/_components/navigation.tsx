@@ -6,6 +6,8 @@ import {
   PopoverTrigger
 } from '@/components/ui/popover';
 import { api } from '@/convex/_generated/api';
+import { useSearch } from '@/hooks/use-search';
+import { useSettings } from '@/hooks/use-settings';
 import { cn } from '@/lib/utils';
 import { useMutation } from 'convex/react';
 import {
@@ -33,6 +35,10 @@ const Navigation = () => {
   const isResizingRef = useRef(false);
   const sideBarRef = useRef<ElementRef<'aside'>>(null);
   const navBarRef = useRef<ElementRef<'div'>>(null);
+
+  const search = useSearch();
+  const settings = useSettings();
+
   const [isResetting, setIsResetting] = useState(false);
   const [isCollapsed, setIsCollapsed] = useState(isMobile);
 
@@ -141,8 +147,8 @@ const Navigation = () => {
         </div>
         <div>
           <UserItem />
-          <Item onClick={() => {}} label="Search" icon={Search} isSearch />
-          <Item onClick={() => {}} label="Settings" icon={Settings} />
+          <Item onClick={search.onOpen} label="Search" icon={Search} isSearch />
+          <Item onClick={settings.onOpen} label="Settings" icon={Settings} />
           <Item onClick={handleCreate} label="New page" icon={PlusCircle} />
         </div>
         <div className="mt-4">
