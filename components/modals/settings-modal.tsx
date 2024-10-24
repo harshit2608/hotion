@@ -18,7 +18,7 @@ const SettingsModal = () => {
           <div className="flex flex-col gay-y-1">
             <Label>Appearance</Label>
             <span className="text-muted-foreground text-[0.8rem]">
-              Customize how Jotion looks on your device
+              Customize how Hotion looks on your device
             </span>
           </div>
           <ModeToggle />

@@ -10,7 +10,7 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Jotion',
+  title: 'Hotion',
   description: 'Your Ideas, Documents, & Plans. Unified',
   icons: {
     icon: [
@@ -43,7 +43,7 @@ export default function RootLayout({
               defaultTheme="light"
               enableSystem
               disableTransitionOnChange
-              storageKey="jotion-theme-2"
+              storageKey="hotion-theme-2"
             >
               <Toaster position="bottom-center" />
               <ModalProvider />
